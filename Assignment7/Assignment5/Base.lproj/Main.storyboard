@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9xr-Ku-cLv">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Prompt-Bold.ttf">
+            <string>Prompt-Bold</string>
+        </array>
+        <array key="Prompt-Regular.ttf">
+            <string>Prompt-Regular</string>
+        </array>
+        <array key="Prompt-SemiBold.ttf">
+            <string>Prompt-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="9ON-ZM-JGs">
+            <objects>
+                <navigationController id="9xr-Ku-cLv" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qIh-zn-OpJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XaH-bP-XWD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VUk-Zs-aSX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1097" y="23"/>
+        </scene>
+        <!--HOME-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Assignment5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CSp-nc-eN7">
+                                <rect key="frame" x="113" y="113" width="189" height="35.5"/>
+                                <fontDescription key="fontDescription" name="Prompt-Regular" family="Prompt" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" textContentType="username"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gim-Bz-9BM">
+                                <rect key="frame" x="113" y="178.5" width="189" height="34"/>
+                                <fontDescription key="fontDescription" name="Prompt-Regular" family="Prompt" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvr-7r-HPA">
+                                <rect key="frame" x="133" y="252.5" width="149" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="149" id="cFG-Iu-IpR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Prompt-Bold" family="Prompt" pointSize="17"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="89s-pP-0Zy"/>
+                                    <segue destination="Ubx-3g-A9p" kind="show" id="lgv-j7-3qm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66594183444976807" green="0.92900139093399048" blue="0.684886634349823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zvr-7r-HPA" secondAttribute="trailing" constant="132" id="01D-pK-fpD"/>
+                            <constraint firstItem="CSp-nc-eN7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="5oY-S3-lbD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CSp-nc-eN7" secondAttribute="trailing" constant="112" id="CGt-yK-Le3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gim-Bz-9BM" secondAttribute="trailing" constant="112" id="GP4-l0-0mj"/>
+                            <constraint firstItem="gim-Bz-9BM" firstAttribute="top" secondItem="CSp-nc-eN7" secondAttribute="bottom" constant="30" id="YOU-LH-Yma"/>
+                            <constraint firstItem="gim-Bz-9BM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="113" id="ZQp-OB-54p"/>
+                            <constraint firstItem="zvr-7r-HPA" firstAttribute="top" secondItem="gim-Bz-9BM" secondAttribute="bottom" constant="40" id="n6T-h3-HMA"/>
+                            <constraint firstItem="CSp-nc-eN7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="113" id="q99-gR-2hG"/>
+                            <constraint firstItem="zvr-7r-HPA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133" id="urG-3Y-MDu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="HOME" id="pPi-gY-Ed2"/>
+                    <connections>
+                        <outlet property="loginButton" destination="zvr-7r-HPA" id="w9m-Mg-3rW"/>
+                        <outlet property="passwordTextField" destination="gim-Bz-9BM" id="gK5-5I-yyV"/>
+                        <outlet property="usernameTextField" destination="CSp-nc-eN7" id="v8T-Ld-Rdd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-368.11594202898556" y="22.767857142857142"/>
+        </scene>
+        <!--Temparature-->
+        <scene sceneID="sNV-rZ-ghg">
+            <objects>
+                <viewController id="zqO-MC-U2A" customClass="ViewController4" customModule="Assignment5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EzZ-lT-6DF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Oox-02-hh1">
+                                <rect key="frame" x="31" y="108" width="347" height="32"/>
+                                <segments>
+                                    <segment title="Celsius"/>
+                                    <segment title="Fahrenheit"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlTapped:" destination="zqO-MC-U2A" eventType="valueChanged" id="Ijj-hz-9X2"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVV-HZ-JCF">
+                                <rect key="frame" x="115" y="159" width="185" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="3Qb-Sz-hY4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Prompt-SemiBold" family="Prompt" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Temperature" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ILa-GL-1V2">
+                                <rect key="frame" x="105" y="255" width="205" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="205" id="Uw3-yo-i57"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="185" id="mkL-rz-O2q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Prompt-Regular" family="Prompt" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jor-a7-5Ml">
+                                <rect key="frame" x="135" y="319" width="145" height="38"/>
+                                <fontDescription key="fontDescription" name="Prompt-Bold" family="Prompt" pointSize="17"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="zqO-MC-U2A" eventType="touchUpInside" id="QoP-RH-cYL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Oox-02-hh1" firstAttribute="top" secondItem="RWy-EW-Ihg" secondAttribute="top" constant="20" id="5Ay-dn-n1Z"/>
+                            <constraint firstItem="ILa-GL-1V2" firstAttribute="top" secondItem="JVV-HZ-JCF" secondAttribute="bottom" constant="20" id="5t1-uY-219"/>
+                            <constraint firstItem="RWy-EW-Ihg" firstAttribute="trailing" secondItem="JVV-HZ-JCF" secondAttribute="trailing" constant="114" id="E3i-wu-Lr8"/>
+                            <constraint firstItem="JVV-HZ-JCF" firstAttribute="leading" secondItem="RWy-EW-Ihg" secondAttribute="leading" constant="115" id="IeZ-C8-pQW"/>
+                            <constraint firstItem="RWy-EW-Ihg" firstAttribute="trailing" secondItem="ILa-GL-1V2" secondAttribute="trailing" constant="104" id="Yos-9F-FP3"/>
+                            <constraint firstItem="Oox-02-hh1" firstAttribute="leading" secondItem="RWy-EW-Ihg" secondAttribute="leading" constant="31" id="ctA-8u-4C8"/>
+                            <constraint firstItem="jor-a7-5Ml" firstAttribute="top" secondItem="ILa-GL-1V2" secondAttribute="bottom" constant="30" id="gyK-sM-BQy"/>
+                            <constraint firstItem="ILa-GL-1V2" firstAttribute="leading" secondItem="RWy-EW-Ihg" secondAttribute="leading" constant="105" id="ikE-4d-SQB"/>
+                            <constraint firstItem="RWy-EW-Ihg" firstAttribute="trailing" secondItem="jor-a7-5Ml" secondAttribute="trailing" constant="134" id="m2E-3C-EFK"/>
+                            <constraint firstItem="jor-a7-5Ml" firstAttribute="leading" secondItem="RWy-EW-Ihg" secondAttribute="leading" constant="135" id="tec-2i-71P"/>
+                            <constraint firstItem="RWy-EW-Ihg" firstAttribute="trailing" secondItem="Oox-02-hh1" secondAttribute="trailing" constant="36" id="xs4-Ru-wto"/>
+                            <constraint firstItem="JVV-HZ-JCF" firstAttribute="top" secondItem="Oox-02-hh1" secondAttribute="bottom" constant="20" id="zwa-sw-md4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RWy-EW-Ihg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Temparature" image="sunrise" catalog="system" id="hTL-8N-P9s"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="Oox-02-hh1" id="ZBp-yK-zOZ"/>
+                        <outlet property="submitButton" destination="jor-a7-5Ml" id="6Yr-ZZ-XQG"/>
+                        <outlet property="temperatureLabel" destination="JVV-HZ-JCF" id="0dk-0K-7EG"/>
+                        <outlet property="temperatureTextField" destination="ILa-GL-1V2" id="Wxe-aS-SLx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s2J-l8-22D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1256.521739130435" y="436.60714285714283"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="KyQ-Ic-5xu">
+            <objects>
+                <viewController id="YOt-aK-sVf" customClass="ViewController2" customModule="Assignment5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5ve-0u-4nM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tajmahal" translatesAutoresizingMaskIntoConstraints="NO" id="oMB-5n-NHS">
+                                <rect key="frame" x="71" y="125" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="petra" translatesAutoresizingMaskIntoConstraints="NO" id="5Vg-Lr-46V">
+                                <rect key="frame" x="71" y="335" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfl-K4-eRs">
+                                <rect key="frame" x="105" y="506" width="186" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Prompt-Bold" family="Prompt" pointSize="17"/>
+                                <state key="normal" title="Petra">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2Fk-pg-mKr" kind="show" identifier="petra" id="0gB-9w-4pf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIM-nn-mrq">
+                                <rect key="frame" x="96" y="275" width="195" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Prompt-Bold" family="Prompt" pointSize="17"/>
+                                <state key="normal" title="Taj Mahal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2Fk-pg-mKr" kind="show" identifier="tajmahal" id="v9e-Ek-oas"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="t4C-CX-RkA"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="8UR-Gu-ccl"/>
+                    <connections>
+                        <outlet property="petraButton" destination="gfl-K4-eRs" id="geH-6Y-oBe"/>
+                        <outlet property="tajmahalButton" destination="WIM-nn-mrq" id="UeO-qb-mus"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZWR-Aw-KpI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1256.521739130435" y="-212.27678571428569"/>
+        </scene>
+        <!--View Controller3-->
+        <scene sceneID="D5m-xy-8QI">
+            <objects>
+                <viewController id="2Fk-pg-mKr" customClass="ViewController3" customModule="Assignment5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mEb-pp-zz1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZrR-w8-0uc">
+                                <rect key="frame" x="47" y="138" width="320" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="o0Z-xu-t9X"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Petra" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfJ-QA-de9">
+                                <rect key="frame" x="47" y="368" width="320" height="26"/>
+                                <fontDescription key="fontDescription" name="Prompt-Bold" family="Prompt" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vss-51-vAL" firstAttribute="trailing" secondItem="ZrR-w8-0uc" secondAttribute="trailing" constant="47" id="8ho-Le-4I4"/>
+                            <constraint firstItem="RfJ-QA-de9" firstAttribute="leading" secondItem="ZrR-w8-0uc" secondAttribute="leading" id="Dpo-16-71S"/>
+                            <constraint firstItem="ZrR-w8-0uc" firstAttribute="leading" secondItem="vss-51-vAL" secondAttribute="leading" constant="47" id="IHa-A4-RDq"/>
+                            <constraint firstItem="RfJ-QA-de9" firstAttribute="trailing" secondItem="ZrR-w8-0uc" secondAttribute="trailing" id="M73-P2-stm"/>
+                            <constraint firstItem="ZrR-w8-0uc" firstAttribute="top" secondItem="vss-51-vAL" secondAttribute="top" constant="50" id="bDB-Xr-4Cg"/>
+                            <constraint firstItem="RfJ-QA-de9" firstAttribute="top" secondItem="ZrR-w8-0uc" secondAttribute="bottom" constant="30" id="s1j-or-0cm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vss-51-vAL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="J0b-aG-ed6"/>
+                    <connections>
+                        <outlet property="expandedImage" destination="ZrR-w8-0uc" id="IEB-fH-rJS"/>
+                        <outlet property="imageLabel" destination="RfJ-QA-de9" id="Hhj-Za-yFs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fHE-9n-NPH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1964" y="-212"/>
+        </scene>
+        <!--Details Page-->
+        <scene sceneID="uKD-7C-Bbt">
+            <objects>
+                <tabBarController id="Ubx-3g-A9p" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Details Page" id="YSn-3u-Lfo"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UKG-tk-DpR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="YOt-aK-sVf" kind="relationship" relationship="viewControllers" id="XA1-oP-cJP"/>
+                        <segue destination="zqO-MC-U2A" kind="relationship" relationship="viewControllers" id="3xM-66-MRy"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kec-8Y-sBf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="313" y="23"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="0gB-9w-4pf"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="petra" width="1024" height="683"/>
+        <image name="sunrise" catalog="system" width="128" height="97"/>
+        <image name="tajmahal" width="640" height="424.5"/>
+    </resources>
+</document>
